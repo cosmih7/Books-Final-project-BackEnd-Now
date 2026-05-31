@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading List Frontend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Reading List</h1>
+      <div id="user-panel" class="user-panel"></div>
+    </header>
+
+    <main>
+      <section class="panel" id="auth-panel">
+        <div class="tab-buttons">
+          <button id="show-login" class="active">Login</button>
+          <button id="show-signup">Signup</button>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <h2>Login</h2>
+          <label>Name or Email</label>
+          <input type="email" id="login-email" placeholder="Email" required />
+          <label>Password</label>
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+
+        <form id="signup-form" class="auth-form hidden">
+          <h2>Signup</h2>
+          <label>Name</label>
+          <input type="text" id="signup-name" placeholder="Your name" required />
+          <label>Email</label>
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <label>Password</label>
+          <input type="password" id="signup-password" placeholder="Password" required />
+          <button type="submit">Create Account</button>
+        </form>
+      </section>
+
+      <section class="panel" id="book-panel">
+        <div class="panel-header">
+          <h2>Books</h2>
+          <div class="filters">
+            <button id="load-all-books">All Books</button>
+            <button id="load-my-books">My Books</button>
+            <button id="sort-user">Sort by User</button>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <label>Filter by user</label>
+          <select id="user-filter">
+            <option value="">All users</option>
+          </select>
+        </div>
+
+        <div id="book-list" class="book-list"></div>
+      </section>
+
+      <section class="panel" id="create-book-panel">
+        <h2>Add a Book</h2>
+        <form id="book-form">
+          <label>Title</label>
+          <input type="text" id="book-title" required />
+          <label>Author</label>
+          <input type="text" id="book-author" required />
+          <label>ISBN</label>
+          <input type="text" id="book-isbn" required />
+          <label>Genre</label>
+          <input type="text" id="book-genre" />
+          <label>Published Year</label>
+          <input type="number" id="book-year" min="1000" max="2100" />
+          <button type="submit">Add Book</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Use the signup form to create a new user and the book form to add books.</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
