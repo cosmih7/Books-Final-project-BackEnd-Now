@@ -21,7 +21,7 @@ A complete Express.js API for managing books, reviews, and users with authentica
 npm install
 ```
 
-2. Create a `.env` file from `.env.example`.
+2. Create a `.env` 
 
 3. Start a MongoDB instance:
 
