@@ -72,7 +72,7 @@ Q1.
 A complete Express.js API for managing books, reviews, and users with authentication, authorization, text search, and aggregation.
 
 Q2.
-This Api will help with managing the basics of a bool store or a individual collection of books with a search function and information related to the books
+This Api will help with managing the basics of a book store or a individual collection of books with a search function and information related to the books..
 
 ## Features
 
